@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "78fff48d-fa79-46f8-a048-6d95611c028f",
+		"name": "backend-engineer-assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5131285",
+		"_collection_link": "https://cloudy-water-3168.postman.co/workspace/New-Team-Workspace~2fd430de-2d9a-44bf-bebb-b345f18242ee/collection/5131285-78fff48d-fa79-46f8-a048-6d95611c028f?action=share&source=collection_link&creator=5131285"
+	},
+	"item": [
+		{
+			"name": "Get List of Accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Bilal\",\n    \"lastName\": \"Ahmed\",\n    \"email\": \"bilalahmedpu+2@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"BilalU\",\n    \"lastName\": \"AhmedU\",\n    \"email\": \"bilalahmedpu+00@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts?accountId=3d84f79d-1094-4a74-bde3-9bd49834710d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "accountId",
+							"value": "3d84f79d-1094-4a74-bde3-9bd49834710d"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
