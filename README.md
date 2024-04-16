@@ -1,11 +1,15 @@
 # Getting Started
 
-**IMPORTANT: Do not send pull requests to this repository. This is a template repository and is not used for grading. Any pull requests will be closed and ignored.**
-
 ## Introduction
+This gradle based springboot project setup with Java version 21. The application uses the Temporal Workflow Engine to 
+handle workflow tasks. In this project, following functionality has been implemented:
 
-If you are reading this, you are probably have received this project as a coding challenge. Please read the instructions
-carefully and follow the steps below to get started.
+- Create New Customer Account in our Backend System and Stripe
+- Added new `providerType` and `providerId` fields
+- Modified Create Customer Account API to store data into these fields
+- Modify List API to Return List of All Customers with Payment Provider Type and Id
+- Implemented a new End Point to Edit Customer Record into our System and into the Stripe as well
+- Documentation of all the changes implemented following OpenAPI specifications
 
 ## Setup
 
@@ -31,6 +35,12 @@ You can install Temporal using Homebrew
 
 ```sh
 brew install temporal
+```
+
+Start the temporal server
+
+```sh
+temporal server start-dev
 ```
 
 or visit [Temporal Installation](https://docs.temporal.io/cli#install) for more information.
@@ -85,6 +95,14 @@ To format the code, use the following command
 ```sh
 ./gradlew spotlessApply
 ```
+
+## Postman APIs Collection
+In this repository, postman APIs collection has been added which consists of the signature of all APIs implemented.
+You can use it to test the functionality.
+
+## Code Walkthrough Video
+In this repository, a detailed code walkthrough video has also been added. That recorded video goes through the code for 
+each API implemented. It covers all the technical details and all the changes made to complete the required functionality.
 
 ## Guides
 
